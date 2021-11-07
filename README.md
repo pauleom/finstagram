@@ -1,4 +1,4 @@
-# finstagram
+git push# finstagram
 
 
 Welcome to the Lighthouse labs web fundamentals project! 
