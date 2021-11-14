@@ -1,15 +1,15 @@
 header {
-    background-color: #244751;
-    color: #E8FDFF;
+    background-color: royalblue;
+    color: orangered;
 }
 
 body {
-    background-color: whitesmoke;
+    background-color: white;
     font-family: 'Oswald', sans-serif;
 }
 
 main {
-    background-color: white;
+    background-color: whitesmoke;
     padding: 16px
 }
 
