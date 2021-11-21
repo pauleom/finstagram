@@ -51,4 +51,6 @@ get '/' do
   } 
 
   [finstagram_post_stretch, finstagram_post_spike, finstagram_post_gif].to_s
+
+  erb(:index)
 end
