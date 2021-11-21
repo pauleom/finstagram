@@ -43,7 +43,7 @@ get '/' do
     photo_url: "https://giphy.com/embed/eJ9igIFoZcPejuVcLY",
     humanized_time_ago: humanized_time_ago(420),
     like_count: 3,
-    comment_count: 2,
+    comment_count: 1,
     comments: [{
         username: "vball_gif_master",
         text: "What a dig!"
