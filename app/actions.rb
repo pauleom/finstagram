@@ -2,16 +2,16 @@
 #   File.read(File.join('app/views', 'index.html'))
 # end
 
-def humanized_time_ago(time_ago_in_minutes)
-    if time_ago_in_minutes >= 60
-      "#{time_ago_in_minutes / 60} hours ago"
+def humanized_time_ago(minute_num)
+    if minute_num >= 60
+      "#{minute_num / 60} hours ago"
     else
-        "#{time_ago_in_minutes} minutes ago"
+        "#{minute_num} minutes ago"
     end
 end
 
 get '/' do
-  finstagram_post_stretch = { 
+  @finstagram_post_stretch = { 
     username: "mikasa_fan",
     avatar_url: "/images/user_profile_mikasa.jfif",
     photo_url: "/images/volleyball_stretch.jfif",
@@ -24,7 +24,7 @@ get '/' do
     }]
   } 
 
-  finstagram_post_spike = { 
+  @finstagram_post_spike = { 
     username: "spike_nation",
     avatar_url: "/images/user_profile_net.jfif",
     photo_url: "/images/volleyball_spike.jfif",
@@ -37,7 +37,7 @@ get '/' do
     }]
   }
 
-  finstagram_post_gif = { 
+  @finstagram_post_gif = { 
     username: "vball_gif_master",
     avatar_url: "/images/user_profile_shadow.png",
     photo_url: "https://giphy.com/embed/eJ9igIFoZcPejuVcLY",
@@ -50,7 +50,7 @@ get '/' do
     }]
   } 
 
-  [finstagram_post_stretch, finstagram_post_spike, finstagram_post_gif].to_s
+  @finstagram_posts = [@finstagram_post_stretch, @finstagram_post_spike, @finstagram_post_gif]
 
   erb(:index)
 end
