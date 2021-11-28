@@ -5,6 +5,11 @@ get '/' do
 
 end
 
+get '/signup' do
+  @user = User.new
+  erb(:signup)
+end
+
 # get '/' do
 #   File.read(File.join('app/views', 'index.html'))
 # end
