@@ -23,3 +23,11 @@ post '/signup' do
   end
 
 end
+
+get '/login' do
+  erb(:login)
+end
+
+post '/login' do
+  params.to_s
+end
