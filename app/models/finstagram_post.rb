@@ -1,5 +1,4 @@
 class FinstagramPost < ActiveRecord::Base
-
     belongs_to :user
     has_many :comments
     has_many :likes
@@ -26,5 +25,4 @@ class FinstagramPost < ActiveRecord::Base
     def comment_count
         self.comments.size
     end
-
 end
